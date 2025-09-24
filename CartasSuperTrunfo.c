@@ -24,8 +24,9 @@ int main() {
 //Preenchimento das Variáveis: 
 
   // Carta 1
+  printf("Carta 1\n");
   printf("Estado da Carta (A-H): \n");
-  scanf("%c",&estado1);
+  scanf(" %c",&estado1);
   printf("Código da Carta (Estado + Nº 01-04): \n");
   scanf("%s",codigo1);
   printf("Nome da Cidade: \n");
@@ -39,8 +40,26 @@ int main() {
   printf("Nº de Pontos Turísticos: \n");
   scanf("%d",&pontos1);
 
+  // Carta 2
+  printf("\nCarta 2\n");
+  printf("Estado da Carta (A-H): \n");
+  scanf(" %c",&estado2);
+  printf("Código da Carta (Estado + Nº 01-04): \n");
+  scanf("%s",codigo2);
+  printf("Nome da Cidade: \n");
+  scanf("%s",cidade2);
+  printf("População da Cidade: \n");
+  scanf("%d",&pop2);
+  printf("Área da Cidade (Km²): \n");
+  scanf("%f",&area2);
+  printf("PIB da cidade (bilhões): \n");
+  scanf("%f",&pib2);
+  printf("Nº de Pontos Turísticos: \n");
+  scanf("%d",&pontos2);
+
 // Visualização das cartas:
-  // Carta 1
+  
+// Carta 1
   printf("\nCarta 1\n");
   printf("Estado: %c\n", estado1);
   printf("Código: %s\n", codigo1);
@@ -49,6 +68,16 @@ int main() {
   printf("Área: %.2f Km²\n", area1);
   printf("PIB:  %.2f bilhôes de reais\n", pib1);
   printf("Nº de pontos turísticos: %d\n", pontos1);
+
+  // Carta 2
+  printf("\nCarta 2\n");
+  printf("Estado: %c\n", estado2);
+  printf("Código: %s\n", codigo2);
+  printf("Cidade: %s\n", cidade2);
+  printf("População: %d pessoas\n", pop2);
+  printf("Área: %.2f Km²\n", area2);
+  printf("PIB:  %.2f bilhôes de reais\n", pib2);
+  printf("Nº de pontos turísticos: %d\n", pontos2);
 
 return 0;
 } 
