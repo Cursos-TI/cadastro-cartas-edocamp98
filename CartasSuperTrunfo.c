@@ -1,8 +1,7 @@
 #include <stdio.h>
+#include <string.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
 
 int main() {
 //Variáveis das cartas:
@@ -29,8 +28,9 @@ int main() {
   scanf(" %c",&estado1);
   printf("Código da Carta (Estado + Nº 01-04): \n");
   scanf("%s",codigo1);
+  getchar();
   printf("Nome da Cidade: \n");
-  scanf("%s",cidade1);
+  scanf("%[^\n]",cidade1);
   printf("População da Cidade: \n");
   scanf("%d",&pop1);
   printf("Área da Cidade (Km²): \n");
@@ -46,8 +46,9 @@ int main() {
   scanf(" %c",&estado2);
   printf("Código da Carta (Estado + Nº 01-04): \n");
   scanf("%s",codigo2);
+  getchar();
   printf("Nome da Cidade: \n");
-  scanf("%s",cidade2);
+  scanf("%[^\n]",cidade2);
   printf("População da Cidade: \n");
   scanf("%d",&pop2);
   printf("Área da Cidade (Km²): \n");
@@ -57,9 +58,15 @@ int main() {
   printf("Nº de Pontos Turísticos: \n");
   scanf("%d",&pontos2);
 
+// Operações:
+  float densidade1 = pop1 / area1;  
+  float densidade2 = pop2 / area2;
+  float ppc1 = (pib1 * 1000000000) / pop1;
+  float ppc2 = (pib2 * 1000000000) / pop2;
+
 // Visualização das cartas:
   
-// Carta 1
+  // Carta 1
   printf("\nCarta 1\n");
   printf("Estado: %c\n", estado1);
   printf("Código: %s\n", codigo1);
@@ -68,6 +75,8 @@ int main() {
   printf("Área: %.2f Km²\n", area1);
   printf("PIB:  %.2f bilhôes de reais\n", pib1);
   printf("Nº de pontos turísticos: %d\n", pontos1);
+  printf("Densidade Populacional: %.2f hab/Km²\n", densidade1);
+  printf("PIB per Capita: %.2f reais\n", ppc1);
 
   // Carta 2
   printf("\nCarta 2\n");
@@ -78,6 +87,8 @@ int main() {
   printf("Área: %.2f Km²\n", area2);
   printf("PIB:  %.2f bilhôes de reais\n", pib2);
   printf("Nº de pontos turísticos: %d\n", pontos2);
+  printf("Densidade Populacional: %.2f hab/Km²\n", densidade2);
+  printf("PIB per Capita: %.2f reais", ppc2);
 
 return 0;
 } 
